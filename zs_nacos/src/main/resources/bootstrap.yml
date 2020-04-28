@@ -1,0 +1,21 @@
+server:
+  port: 2020
+spring:
+  application:
+    name: nacos-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        file-extension: yaml
+        server-addr: 127.0.0.1:8848
+        namespace: ca9d66f3-ae80-4b14-a5b0-87303325e09e
+        shared-dataids: nacos-provider-dev1.yaml
+  profiles:
+    active: dev
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
