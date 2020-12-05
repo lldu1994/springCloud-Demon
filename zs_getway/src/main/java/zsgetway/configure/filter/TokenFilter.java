@@ -20,11 +20,13 @@ public class TokenFilter extends ZuulFilter {
     *
     * */
 
+    @Override
     public boolean shouldFilter() {   //判断过滤器是否生效
         // TODO Auto-generated method stub
         return true;
     }
 
+    @Override
     public Object run() throws ZuulException {  //编写顾虑器拦截业务逻辑代码
         // 案例：拦截所有都服务接口，判断服务接口上是否有传递userToekn参数
         //获取上下文

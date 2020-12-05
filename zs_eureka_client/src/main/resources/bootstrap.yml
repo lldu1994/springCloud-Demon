@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: zs_eureka_client
+server:
+  port: 8084
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8763/eureka/

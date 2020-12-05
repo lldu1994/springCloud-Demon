@@ -1,0 +1,13 @@
+server:
+  port: 8763
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false #是否需要注册到eureka
+    fetch-registry: false #是否需要从eureka中拉取数据
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+  server:
+    enable-self-preservation: true #自我保护模式 当出现网络分区时，
+    #eureka在短时间内丢失过多客户端时，会进入自我保护模式，eureka也不会将其删除，默认为true
